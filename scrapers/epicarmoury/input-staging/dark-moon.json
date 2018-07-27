@@ -1,8 +1,8 @@
 [
   {
     "url": "http://www.epicarmouryunlimited.com/en/2072-SmallWeapons",
-    "categories": [""],
-    "filePath": ""
+    "categories": ["weapon", "small weapon"],
+    "filePath": "dark-moon-small-weapons"
   },
   {
     "url": "http://www.epicarmouryunlimited.com/en/2073-Weapons",

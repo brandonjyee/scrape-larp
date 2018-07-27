@@ -1,0 +1,60 @@
+[
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2033-latex-short-swords?n=200",
+    "categories": [""],
+    "filePath": ""
+  },
+  {
+    "url":
+      "http://www.epicarmouryunlimited.com/en/2313-medium-latex-larp-swords?n=200",
+    "categories": [""],
+    "filePath": ""
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2032-larp-long-swords?n=200",
+    "categories": [""],
+    "filePath": ""
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2034-latex-claymore-sword?n=200",
+    "categories": [""],
+    "filePath": ""
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2035-latex-larp-dagger?n=200",
+    "categories": ["weapon", "dagger", "latex"],
+    "filePath": "daggers.json"
+  },
+  {
+    "url":
+      "http://www.epicarmouryunlimited.com/en/2037-latex-larp-shields?n=200",
+    "categories": ["shield", "weapon", "latex"],
+    "filePath": "shields.json"
+  },
+
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2038-larp-polearms?n=200",
+    "categories": [""],
+    "filePath": ""
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2039-larp-maces-and-larp-hammers?n=200",
+    "categories": [""],
+    "filePath": ""
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2040-larp-axe?n=200",
+    "categories": [""],
+    "filePath": ""
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2111-larp-foam-throwing-knives?n=200",
+    "categories": [""],
+    "filePath": ""
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2093-larp-weapons-for-children?n=200",
+    "categories": [""],
+    "filePath": ""
+  }
+]

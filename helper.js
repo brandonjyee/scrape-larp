@@ -2,27 +2,52 @@ const assert = require('assert');
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 
-module.exports.setupConsoleDebug = (page) => {
+module.exports.noSpaceOrPunctuation = (str, replacement = '-') => {
+  return str.replace(/[^\w]/g, replacement)
+}
+
+module.exports.writeToFileAsJSON = (data, outputFile) => {
+  const json = JSON.stringify(data);
+  fs.writeFileSync(outputFile, json, 'utf8', function(err) {
+    if (err) throw err;
+    console.log('Completed writing json file');
+  });
+};
+
+const setupConsoleDebug = page => {
   page.on('console', msg => {
     for (let i = 0; i < msg.args().length; ++i)
       console.log(`${i}: ${msg.args()[i]}`);
   });
-}
+};
+module.exports.setupConsoleDebug = setupConsoleDebug;
+
+module.exports.setupBrowserAndPage = async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  page.setViewport({ width: 1280, height: 926 });
+  setupConsoleDebug(page);
+  return [browser, page];
+};
 
 module.exports.savePic = async (page, filePath = 'screenshot.png') => {
-  await page.screenshot({path: filePath, fullPage: true });
-}
+  await page.screenshot({ path: filePath, fullPage: true });
+};
 
-module.exports.launchBrowserFromLinux = async (headless) => {
+module.exports.launchBrowserFromLinux = async headless => {
   const browser = await puppeteer.launch({
     headless,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
     executablePath: 'google-chrome-unstable',
   });
-  return browser
-}
+  return browser;
+};
 
-module.exports.screenshotSVGAsPNG = async (page, selector, filePath = "mySVGScreenshot.png") => {
+module.exports.screenshotSVGAsPNG = async (
+  page,
+  selector,
+  filePath = 'mySVGScreenshot.png'
+) => {
   // const svgImage = await page.$('#svg');
   const svgImage = await page.$(selector);
   await svgImage.screenshot({
@@ -32,7 +57,7 @@ module.exports.screenshotSVGAsPNG = async (page, selector, filePath = "mySVGScre
 };
 
 // Does not work with Cross Site Origin Resources (CORS)
-module.exports.parseDataUrl = (dataUrl) => {
+module.exports.parseDataUrl = dataUrl => {
   const matches = dataUrl.match(/^data:(.+);base64,(.+)$/);
   if (matches.length !== 3) {
     throw new Error('Could not parse data URL.');
@@ -41,7 +66,7 @@ module.exports.parseDataUrl = (dataUrl) => {
 };
 
 // Does not work with Cross Site Origin Resources (CORS)
-module.exports.getDataUrlThroughCanvas = async (selector) => {
+module.exports.getDataUrlThroughCanvas = async selector => {
   // Create a new image element with unconstrained size.
   const originalImage = document.querySelector(selector);
   const image = document.createElement('img');
@@ -54,8 +79,8 @@ module.exports.getDataUrlThroughCanvas = async (selector) => {
   canvas.height = image.height;
 
   // Ensure the image is loaded.
-  await new Promise((resolve) => {
-    if (image.complete || (image.width) > 0) resolve();
+  await new Promise(resolve => {
+    if (image.complete || image.width > 0) resolve();
     image.addEventListener('load', () => resolve());
   });
 
@@ -63,6 +88,7 @@ module.exports.getDataUrlThroughCanvas = async (selector) => {
   return canvas.toDataURL();
 };
 
+// Does not work with Cross Site Origin Resources (CORS)
 module.exports.getDataUrlThroughFetch = async (selector, options = {}) => {
   const image = document.querySelector(selector);
   const url = image.src;
@@ -73,20 +99,27 @@ module.exports.getDataUrlThroughFetch = async (selector, options = {}) => {
   }
   const data = await response.blob();
   const reader = new FileReader();
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     reader.addEventListener('loadend', () => resolve(reader.result));
     reader.readAsDataURL(data);
   });
 };
 
-
-module.exports.getImageContent = async (page, url) => {
+// Works across CORS
+const getImageContent = async (page, url) => {
   const { content, base64Encoded } = await page._client.send(
     'Page.getResourceContent',
     { frameId: String(page.mainFrame()._id), url }
   );
   assert.equal(base64Encoded, true);
   return content;
+};
+module.exports.getImageContent = getImageContent;
+
+module.exports.writeImgToFile = async (page, imgUrl, outputImageFile) => {
+  const content = await getImageContent(page, imgUrl);
+  const contentBuffer = Buffer.from(content, 'base64');
+  fs.writeFileSync(outputImageFile, contentBuffer, 'base64');
 };
 
 module.exports.enableSaveAllImages = page => {
