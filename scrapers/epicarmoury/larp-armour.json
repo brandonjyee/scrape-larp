@@ -1,0 +1,58 @@
+[
+  {
+    "url":
+      "http://www.epicarmouryunlimited.com/en/2302-complete-larp-armor?n=200",
+    "categories": ["armor", "full armor"],
+    "filePath": "armor-full-armor.json"
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2015-larp-helmets?n=200",
+    "categories": ["helmet"],
+    "filePath": "armor-helmet.json"
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2012-larp-shoulder-armor?n=200",
+    "categories": ["armor", "pauldron", "shoulder armor"],
+    "filePath": "armor-pauldron.json"
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2013-larp-arm-protection?n=200",
+    "categories": ["armor", "bracer", "arm armor"],
+    "filePath": "armor-bracer.json"
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2021-larp-gauntlets?n=200",
+    "categories": ["armor", "gauntlet"],
+    "filePath": "armor-gaunlet.json"
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2019-tassets?n=200",
+    "categories": ["armor", "tasset"],
+    "filePath": "armor-tasset.json"
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2014-legs?n=200",
+    "categories": ["armor", "legs"],
+    "filePath": "armor-legs.json"
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2016-breastplates?n=200",
+    "categories": ["armor", "chest", "breastplate"],
+    "filePath": "armor-breastplate.json"
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2017-backplates?n=200",
+    "categories": ["armor", "backplate", "back"],
+    "filePath": "armor-backplate.json"
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2018-larp-gorget?n=200",
+    "categories": ["armor", "gorget"],
+    "filePath": "armor-gorget.json"
+  },
+  {
+    "url": "http://www.epicarmouryunlimited.com/en/2020-larp-chainmail-armor?n=200",
+    "categories": ["armor", "chainmail"],
+    "filePath": "armor-chainmail.json"
+  }
+]
