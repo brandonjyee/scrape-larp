@@ -6,6 +6,16 @@ module.exports.noSpaceOrPunctuation = (str, replacement = '-') => {
   return str.replace(/[^\w]/g, replacement)
 }
 
+module.exports.getFileExtension = (str) => {
+  const result = str.match(/\.[0-9a-z]+$/i)
+  if (!result) {
+    console.log('no matching file extension for:', str)
+    return '.png'
+  } else {
+    return result[0]
+  }
+}
+
 module.exports.writeToFileAsJSON = (data, outputFile) => {
   const json = JSON.stringify(data);
   fs.writeFileSync(outputFile, json, 'utf8', function(err) {

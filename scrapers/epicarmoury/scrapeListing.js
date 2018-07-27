@@ -1,8 +1,20 @@
 // const fs = require('fs');
 // const puppeteer = require('puppeteer');
-const { noSpaceOrPunctuation, writeToFileAsJSON, writeImgToFile } = require('../../helper');
+const path = require('path');
+const {
+  noSpaceOrPunctuation,
+  writeToFileAsJSON,
+  writeImgToFile,
+  getFileExtension,
+} = require('../../helper');
 
-const scrapeListing = async (page, listingUrl, outputFile, outputImageFile) => {
+const scrapeListing = async (
+  page,
+  listingUrl,
+  outputFile,
+  outputImagePath,
+  categories
+) => {
   try {
     // Navigate to the page
     await page.goto(listingUrl);
@@ -60,14 +72,20 @@ const scrapeListing = async (page, listingUrl, outputFile, outputImageFile) => {
       return retArr;
     });
 
-    // Modify the items by resolving the imgUrl
+    // Modify the items:
+    // 1. Resolve the imgUrl
+    // 2. Add the categories
     const promises = [];
     for (let i = 0; i < retItems.length; i++) {
-      const item = retItems[i]
-      // TODO: fix img extension. Need to support jpeg, jpg, gif as well
-      item.localImgName = noSpaceOrPunctuation(item.name) + '.png'
-      promises.push(writeImgToFile(page, item.origImgUrl, item.localImgName));
-    };
+      const item = retItems[i];
+      const fileName =
+        noSpaceOrPunctuation(item.name) + getFileExtension(item.origImgUrl);
+      const filePath = path.join(outputImagePath, fileName);
+      item.localImgName = fileName;
+      item.categories = categories
+
+      promises.push(writeImgToFile(page, item.origImgUrl, filePath));
+    }
     await Promise.all(promises);
 
     // Write the json file

@@ -25,28 +25,34 @@ const scrapeListings = async () => {
 
     const allFiles = loadFiles();
 
-    let totalRecords = 0
+    let totalRecords = 0;
+    const outputImagePath = path.join(__dirname, 'outputs', 'img');
+    // For each file containing multiple listing pages
     for (let i = 0; i < allFiles.length; i++) {
-      const fileData = allFiles[i].data
-      console.log('file:', allFiles[i])
+      const fileData = allFiles[i].data;
+      // console.log('file:', allFiles[i]);
+
+      // For each listing page
       for (let j = 0; j < fileData.length; j++) {
-        const listing = fileData[j]
+        const listing = fileData[j];
         const listingUrl = listing.url;
         const outputFile = path.join(__dirname, 'outputs', listing.fileName);
-        const outputImageFile = path.join(
-          __dirname,
-          'outputs',
-          'img',
-          listing.fileName.replace('json', 'png')
+        const categories = listing.categories
+
+        console.log(listingUrl);
+        console.log(outputFile);
+        console.log(outputImagePath);
+        const numItems = await scrapeListing(
+          page,
+          listingUrl,
+          outputFile,
+          outputImagePath,
+          categories
         );
-        console.log(listingUrl)
-        console.log(outputFile)
-        console.log(outputImageFile)
-        const numItems = await scrapeListing(page, listingUrl, outputFile, outputImageFile);
-        totalRecords += numItems
+        totalRecords += numItems;
       }
     }
-    console.log('TOTAL RECORDS SCRAPED:', totalRecords)
+    console.log('TOTAL RECORDS SCRAPED:', totalRecords);
 
     console.log(`Finished scraping all listings for: ${__dirname}`);
     await browser.close();
