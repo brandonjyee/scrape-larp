@@ -1,27 +1,27 @@
 [
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2265-hybrid-short-sword",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2265-hybrid-short-sword?n=200",
+    "categories": ["hybrid", "weapon", "sword", "short sword"],
+    "fileName": "hybrid-short-sword.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2268-hybrid-medium-sword",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2268-hybrid-medium-sword?n=200",
+    "categories": ["hybrid", "weapon", "sword", "medium sword"],
+    "fileName": "hybrid-medium-sword.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2266-hybrid-long-sword",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2266-hybrid-long-sword?n=200",
+    "categories": ["hybrid", "weapon", "sword", "long sword"],
+    "fileName": "hybrid-long-sword.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2267-hybrid-claymore-sword",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2267-hybrid-claymore-sword?n=200",
+    "categories": ["hybrid", "weapon", "claymore"],
+    "fileName": "hybrid-claymore-sword.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2269-hybrid-children-sword",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2269-hybrid-children-sword?n=200",
+    "categories": ["hybrid", "weapon", "children", "sword", "children sword"],
+    "fileName": "hybrid-children-sword.json"
   }
 ]

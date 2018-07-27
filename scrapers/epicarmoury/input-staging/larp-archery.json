@@ -1,27 +1,27 @@
 [
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2063-larp-archery-gloves",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2063-larp-archery-gloves?n=200",
+    "categories": ["archery", "glove"],
+    "fileName": "larp-archery-gloves.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2064-larp-arrows",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2064-larp-arrows?n=200",
+    "categories": ["archery", "arrow"],
+    "fileName": "larp-arrows.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2065-larp-archery-quivers",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2065-larp-archery-quivers?n=200",
+    "categories": ["archery", "quiver"],
+    "fileName": "larp-archery-quivers.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2066-larp-bows",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2066-larp-bows?n=200",
+    "categories": ["archery", "bow"],
+    "fileName": "larp-bows.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2068-larp-archery-accessories",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2068-larp-archery-accessories?n=200",
+    "categories": ["archery", "accessory"],
+    "fileName": "larp-archery-accessories.json"
   }
 ]

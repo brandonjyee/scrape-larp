@@ -39,9 +39,9 @@ const scrapeListings = async () => {
         const outputFile = path.join(__dirname, 'outputs', listing.fileName);
         const categories = listing.categories
 
-        console.log(listingUrl);
-        console.log(outputFile);
-        console.log(outputImagePath);
+        // console.log(listingUrl);
+        // console.log(outputFile);
+        // console.log(outputImagePath);
         const numItems = await scrapeListing(
           page,
           listingUrl,

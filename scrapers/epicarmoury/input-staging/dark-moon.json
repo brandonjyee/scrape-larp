@@ -1,17 +1,17 @@
 [
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2072-SmallWeapons",
-    "categories": ["weapon", "small weapon"],
-    "filePath": "dark-moon-small-weapons"
+    "url": "http://www.epicarmouryunlimited.com/en/2072-SmallWeapons?n=200",
+    "categories": ["weapon", "dark moon", "small weapon"],
+    "fileName": "dark-moon-small-weapons.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2073-Weapons",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2073-Weapons?n=200",
+    "categories": ["weapon", "dark moon"],
+    "fileName": "dark-moon-weapons.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2074-Shields",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2074-Shields?n=200",
+    "categories": ["shield", "dark moon"],
+    "fileName": "dark-moon-shields.json"
   }
 ]

@@ -1,57 +1,57 @@
 [
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2049-larp-hoods",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2049-larp-hoods?n=200",
+    "categories": ["clothing", "hood", "head"],
+    "fileName": "larp-hoods.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2050-medieval-larp-tunics",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2050-medieval-larp-tunics?n=200",
+    "categories": ["clothing", "medieval", "tunic"],
+    "fileName": "medieval-larp-tunics.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2051-medieval-larp-shirts",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2051-medieval-larp-shirts?n=200",
+    "categories": ["clothing", "medieval", "shirt"],
+    "fileName": "medieval-larp-shirts.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2052-medieval-larp-pants",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2052-medieval-larp-pants?n=200",
+    "categories": ["clothing", "medieval", "pants"],
+    "fileName": "medieval-larp-pants.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2053-medieval-larp-capes",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2053-medieval-larp-capes?n=200",
+    "categories": ["clothing", "medieval", "cape"],
+    "fileName": "medieval-larp-capes.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2054-larp-gambesons",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2054-larp-gambesons?n=200",
+    "categories": ["clothing", "gambeson"],
+    "fileName": "larp-gambesons.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2056-larp-war-skirts",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2056-larp-war-skirts?n=200",
+    "categories": ["clothing", "skirt"],
+    "fileName": "larp-war-skirts.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2057-oriental-larp-clothing",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2057-oriental-larp-clothing?n=200",
+    "categories": ["clothing", "oriental"],
+    "fileName": "oriental-larp-clothing.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2087-larp-tabard",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2087-larp-tabard?n=200",
+    "categories": ["clothing", "tabard"],
+    "fileName": "larp-tabard.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2255-larp-jackets-and-vests",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2255-larp-jackets-and-vests?n=200",
+    "categories": ["clothing", "jacket", "vest"],
+    "fileName": "larp-jackets-and-vests.json"
   },
   {
-    "url": "http://www.epicarmouryunlimited.com/en/2276-coats-and-robes",
-    "categories": [""],
-    "filePath": ""
+    "url": "http://www.epicarmouryunlimited.com/en/2276-coats-and-robes?n=200",
+    "categories": ["clothing", "coat", "robe"],
+    "fileName": "coats-and-robes.json"
   }
 ]
