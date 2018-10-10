@@ -24,6 +24,35 @@ npm start
 
 To create your own scraper within this repo, simply create a file in the /scrapers folder that exports a function that will perform the scraping. For example, let's create a file called myScraper.js in /scrapers which will contain:
 ```
+const puppeteer = require('puppeteer');
+
+const scrape = async () => {
+    const browser = await puppeteer.launch({headless: true});
+    const page = await browser.newPage();
+    
+    // This is the site we'll be scraping
+    await page.goto('http://books.toscrape.com/');
+
+    const result = await page.evaluate(() => {
+        let data = []; // Create an empty array that will store our data
+        let elements = document.querySelectorAll('.product_pod'); // Select all Products
+
+        for (var element of elements){ // Loop through each proudct
+            let title = element.childNodes[5].innerText; // Select the title
+            let price = element.childNodes[7].children[0].innerText; // Select the price
+
+            data.push({title, price}); // Push an object with the data onto our array
+        }
+
+        return data; // Return our data array
+    });
+
+    console.log('bookScrape is done')
+    await browser.close();
+    return result; // Return the data
+};
+
+module.exports = scrape
 ```
 Now, let's set the scrapeRunner to use our new scraper:
 ```
