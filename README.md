@@ -1,6 +1,6 @@
 # scrape-larp
 
-This repo demonstrates how to write a simple web scraper using Puppeteer and Javascript to extract text and images from a web page. The main example site we'll be scraping from is epicarmouryunlimited.com.
+This project demonstrates how to write a simple web scraper (using Puppeteer and Javascript) that will extract text and images from a web page. The main example site we'll be scraping from is epicarmouryunlimited.com. The techniques and workflow demonstrated in this project work well for smaller scraping jobs. Larger jobs that require automated crawling is out of the scope of this project.
 
 - /examples : contains basic web scraping examples using Puppeteer
 
@@ -54,7 +54,7 @@ const scrape = async () => {
 
 module.exports = scrape
 ```
-Now, let's set the scrapeRunner to use our new scraper:
+Now, let's modify scrapeRunner.js to use our new scraper:
 ```
 const scrapeFn = require('./scrapers/myScraper')
 ```
