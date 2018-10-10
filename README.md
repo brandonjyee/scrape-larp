@@ -52,6 +52,7 @@ const scrape = async () => {
     return result; // Return the data
 };
 
+// Exporting our scraper function
 module.exports = scrape
 ```
 Now, let's modify scrapeRunner.js to use our new scraper:
