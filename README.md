@@ -1,4 +1,7 @@
 # scrape-larp
+<p align="center">
+  <img src="https://github.com/brandonjyee/scrape-larp/blob/master/web-scraping-logo.png" alt="HeroHelp Logo"/>
+</p>
 
 This project demonstrates how to write a simple web scraper (using Puppeteer and Javascript) that will extract text and images from a web page. The main example site we'll be scraping from is epicarmouryunlimited.com. The techniques and workflow demonstrated in this project work well for smaller scraping jobs. Larger jobs that require automated crawling is out of the scope of this project.
 
