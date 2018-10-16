@@ -9,24 +9,24 @@ This project demonstrates how to write a simple web scraper (using Puppeteer and
 
 To install, first clone this repo then navigate into the repo folder and run:
 
-```
+```bash
 npm install
 ```
 *Note: you must have npm installed on your system.
 
 Then specify the scraper you want to use in scrapeRunner.js. Ex:
 
-```
+```js
 // This sets our scrapeFn to be the epicarmoury/scrapListings scraper
 const scrapeFn = require('./scrapers/epicarmoury/scrapeListings') 
 ```
 Once you've set the scraper, you can run it with:
-```
+```bash
 npm start
 ```
 
 To create your own scraper within this repo, simply create a file in the /scrapers folder that exports a function that will perform the scraping. For example, let's create a file called myScraper.js in /scrapers which will contain:
-```
+```js
 const puppeteer = require('puppeteer');
 
 const scrape = async () => {
@@ -59,11 +59,11 @@ const scrape = async () => {
 module.exports = scrape
 ```
 Now, let's modify scrapeRunner.js to use our new scraper:
-```
+```js
 const scrapeFn = require('./scrapers/myScraper')
 ```
 Now we run the scraper:
-```
+```bash
 npm start
 ```
 And that's it!
